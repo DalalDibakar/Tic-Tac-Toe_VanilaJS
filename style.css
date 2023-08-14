@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./Assets/1091500.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+#heading{
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+}
+
+.game-container{
+    width:90%;
+    max-width:20rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    aspect-ratio: 1/1;
+}
+.box{
+    width: 100%;
+    display: flex;
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.box1,.box2,.box3{
+    border-top: none;
+}
+.box1,.box4,.box7{
+    border-left: none;
+}
+.box7,.box8,.box9{
+    border-bottom: none;
+}
+.box9,.box6,.box3{
+    border-right: none;
+}
+
+.btn{
+    display: flex;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.btn.active{
+    pointer-events: initial;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.box.win{
+    background-color: rgb(42, 184, 42);
+}
+
+.box.noresponse{
+    pointer-events: none;
+}
